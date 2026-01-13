@@ -1,7 +1,7 @@
 
 export const lightTheme = {
     "colors": {
-        "primary": "rgb(247, 108, 17)",
+        "primary": "#f86e12",
         "onPrimary": "rgb(255, 255, 255)",
         "primaryContainer": "rgb(255, 219, 204)",
         "onPrimaryContainer": "rgb(53, 16, 0)",

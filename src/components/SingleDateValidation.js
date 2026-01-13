@@ -70,7 +70,7 @@ const SingleDateValidation = ({ startDate = () => { }, isDisabledDate = false })
                 startDate(params.date)
             } else {
                 setOpen(false);
-                toast.show("Invalid date. Only dates after are allowed", { type: 'warning' });
+               alert("Invalid date. Only dates after are allowed");
             }
 
         },

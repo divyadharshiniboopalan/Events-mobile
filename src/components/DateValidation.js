@@ -9,13 +9,14 @@ import { useToast } from 'react-native-toast-notifications'
 
 export const dateFieldValidation = (eventDate, eventDateEnd, title) => {
 
+
     // current Date and Start Date and End Date is the Same
 
     if (moment(new Date()).format("YYYY-MM-DD") === moment(eventDate).format("YYYY-MM-DD") && moment(eventDate).format("YYYY-MM-DD") === moment(eventDateEnd).format("YYYY-MM-DD")) {
         if (moment(eventDate).format() >= moment(new Date()).format()) {
             if ((moment(eventDateEnd).format() > moment(eventDate).format())) {
 
-                if (title) {
+                if (title.trim() !== "") {
                     return true
                 } else {
                     alert("Event Name is Required");
@@ -124,7 +125,7 @@ const DateValidation = ({ startDate = () => { }, endDate = () => { }, isDisabled
                 startDate(params.date)
             } else {
                 setOpen(false);
-                toast.show("Invalid date. Only dates after are allowed", { type: 'warning' });
+                alert("Invalid date. Only dates after are allowed");
             }
 
         },
@@ -144,7 +145,7 @@ const DateValidation = ({ startDate = () => { }, endDate = () => { }, isDisabled
                 setEventDateEnd(params.date);
             } else {
                 setOpenEndDate(false);
-                toast.show("Invalid date. Only dates after are allowed", { type: 'warning' });
+               alert("Invalid date. Only dates after are allowed");
             }
 
         },

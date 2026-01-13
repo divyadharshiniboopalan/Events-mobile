@@ -8,7 +8,9 @@ import { TouchableOpacity } from 'react-native';
 import * as Calendar from 'expo-calendar';
 import { DatePickerInput, DatePickerModal, TimePickerModal } from 'react-native-paper-dates';
 import moment from 'moment';
-import { AntDesign, MaterialCommunityIcons, FontAwesome5, Fontisto, FontAwesome6, Entypo } from '@expo/vector-icons';
+import { AntDesign, MaterialCommunityIcons, FontAwesome5, Fontisto } from '@expo/vector-icons';
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+import Entypo from '@expo/vector-icons/Entypo';
 import TitleBar from '../components/TitleBar';
 import { useToast } from 'react-native-toast-notifications';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
@@ -136,7 +138,7 @@ const CreateEvents = (props) => {
         setDescription("")
         setCreateLoader(false)
         setColorsList("#f76c11")
-        toast.show("Event created successfully!", { type: 'success' });
+        alert("Event created successfully!");
         navigation.navigate("Dashboard")
       } catch (error) {
         console.log("🚀  file: CreateEvent.js:73  createCalendar ~ error:", error)
@@ -409,7 +411,7 @@ const CreateEvents = (props) => {
                           locationRef.current?.setAddressText(''), setLocation("")
                         }}
                       >
-                        {Platform.OS === "android" && <AntDesign name="closecircle" size={scr_height * 0.022} color={theme.colors.outline} />}
+                        {Platform.OS === "android" && <AntDesign name="close-circle" size={scr_height * 0.022} color={theme.colors.outline} />}
                       </TouchableOpacity>
                     )}
                   />

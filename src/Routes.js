@@ -16,7 +16,7 @@ import UpdateEvent from './screens/UpdateEvent';
 import Pending from './screens/Pending';
 import Total from './screens/Total';
 import TodayEvents from './screens/TodayEvents';
-import DocumentScanner from './screens/DocumentScanner';
+
 
 const Routes = () => {
     const Stack = createNativeStackNavigator();
@@ -38,7 +38,7 @@ const Routes = () => {
                         <Stack.Screen options={{ headerShown: false }} name="Pending" component={Pending} />
                         <Stack.Screen options={{ headerShown: false }} name="Total" component={Total} />
                         <Stack.Screen options={{ headerShown: false }} name="TodayEvents" component={TodayEvents}/>
-                        <Stack.Screen options={{ headerShown: false }} name="DocumentScanner" component={DocumentScanner}/>
+                      
                     </Stack.Navigator>
                 </NavigationContainer>
             </SafeAreaView>

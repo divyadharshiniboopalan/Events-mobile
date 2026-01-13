@@ -4,15 +4,12 @@ import Routes from './src/Routes';
 import { PaperProvider, Provider, useTheme } from 'react-native-paper';
 import { darkTheme, lightTheme } from './src/components/Theme';
 import { enGB, registerTranslation } from 'react-native-paper-dates'
-import { ToastProvider } from 'react-native-toast-notifications'
 import LottieView from 'lottie-react-native'
 import { scr_height, scr_width } from './src/utils/Dimention';
-import { RNText } from './src/components/RNText';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
-import { useCallback, useEffect, useRef, useState } from 'react';
-import * as BackgroundFetch from 'expo-background-fetch';
-import * as TaskManager from 'expo-task-manager';
+import { useCallback} from 'react';
+
 
 
 
@@ -25,7 +22,7 @@ export default function App() {
 
 
   const [fontsLoaded, fontError] = useFonts({
-    'Roboto_Slab': require('./src/assests/fonts/Roboto_Slab/static/RobotoSlab-Regular.ttf'),
+    'Roboto_Slab': require('./src/assets/font/RobotoSlab-Regular.ttf'),
   });
 
   const onLayoutRootView = useCallback(async () => {
@@ -42,64 +39,7 @@ export default function App() {
   return (
     <Provider onLayout={onLayoutRootView}>
       <PaperProvider theme={colorScheme === "dark" ? darkTheme : lightTheme}>
-        <ToastProvider
-          duration={3000}
-          placement='bottom'
-          animationType='zoom-in'
-          animationDuration={250}
-          successColor="#22bb33"
-          dangerColor="#bb2124"
-          warningColor="#f0ad4e"
-          normalColor="gray"
-          // offset for both top and bottom toasts
-
-          successIcon={<LottieView
-            autoPlay
-            loop={false}
-            style={{ width: scr_width * 0.083, height: scr_height * 0.041, position: "relative", justifyContent: "center" }}
-            source={require("/Users/hariharan/Documents/Divya/events-mobile/src/assests/success.json")}
-          />}
-          dangerIcon={<LottieView
-            autoPlay
-            loop={false}
-            style={{ width: scr_width * 0.083, height: scr_height * 0.041, position: "relative", justifyContent: "center" }}
-            source={require("/Users/hariharan/Documents/Divya/events-mobile/src/assests/error.json")}
-          />}
-          warningIcon={<LottieView
-            autoPlay
-            loop={false}
-            style={{ width: 40, height: 40, position: "relative", justifyContent: "center" }}
-            source={require("/Users/hariharan/Documents/Divya/events-mobile/src/assests/info.json")}
-          />}
-          swipeEnabled={true}
-
-          renderToast={(toastOptions) =>
-            <View style={[styles.toastContainer]}>
-              <View style={{ flexDirection: "row", alignItems: "center", width: scr_width - 55 }}>
-                <View>
-                  {toastOptions.type == "success" && toastOptions.successIcon}
-                  {toastOptions.type == "danger" && toastOptions.dangerIcon}
-                  {toastOptions.type == "warning" && toastOptions.warningIcon}
-                </View>
-                <View style={{ marginLeft: 5, width: "100%", }}>
-                  <View style={{ width: "75%" }}>
-                    <RNText style={styles.toastText} title={toastOptions.message} variant={'titleMedium'} color={theme.colors.background} />
-                  </View>
-                </View>
-              </View>
-
-              {
-                (toastOptions.button && toastOptions.onPressFunction) &&
-                <TouchableOpacity onPress={toastOptions.onPressFunction} style={{ alignSelf: 'center', backgroundColor: theme.colors.outline, paddingVertical: 5, paddingHorizontal: 10, borderRadius: 50, marginTop: 10 }}>
-                  <RNText style={styles.toastText} title={toastOptions.button ? toastOptions.button : ""} variant={'titleMedium'} color={theme.colors.background} />
-                </TouchableOpacity>
-              }
-            </View>}
-
-        >
-          <Routes />
-          <StatusBar backgroundColor={"#fbede3"} />
-        </ToastProvider>
+        <Routes/>
       </PaperProvider>
     </Provider>
   );

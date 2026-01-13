@@ -15,7 +15,7 @@ const ReadNotesPage = (props) => {
                 <TouchableOpacity
                     onPress={() => navigation.goBack()}
                     style={{ right: 15, marginVertical: 5, }}>
-                    <AntDesign name="arrowleft" size={22} color="black" />
+                    <AntDesign name="arrow-left" size={22} color="black" />
                 </TouchableOpacity>
                 <View >
             

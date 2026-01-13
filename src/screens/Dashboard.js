@@ -38,12 +38,12 @@ const Dashboard = () => {
 
         {
             let secTimer = setInterval(() => {
-                date_future = new Date(date);
-                date_now = new Date();
-                seconds = Math.floor((date_future - (date_now)) / 1000);
-                minutes = Math.floor(seconds / 60);
-                hours = Math.floor(minutes / 60);
-                days = Math.floor(hours / 24);
+              let  date_future = new Date(date);
+              let  date_now = new Date();
+               let seconds = Math.floor((date_future - (date_now)) / 1000);
+               let minutes = Math.floor(seconds / 60);
+               let hours = Math.floor(minutes / 60);
+               let days = Math.floor(hours / 24);
                 hours = hours - (days * 24);
                 minutes = minutes - (days * 24 * 60) - (hours * 60);
                 seconds = seconds - (days * 24 * 60 * 60) - (hours * 60 * 60) - (minutes * 60);
@@ -184,9 +184,9 @@ const Dashboard = () => {
                             <View style={{ marginHorizontal: 15 }}>
                                 <View style={{ marginTop: 20, flexDirection: "row", justifyContent: "space-between", marginHorizontal: 3 }}>
                                     <RNText title={"Dashboard"} color={theme.colors.primary} fontSize={18} fontWeight="500" />
-                                    <TouchableOpacity style={{ marginHorizontal: 10 }} onPress={() => navigation.navigate("DocumentScanner")}>
+                                    {/* <TouchableOpacity style={{ marginHorizontal: 10 }} >
                                         <FontAwesome5 name="users" size={23} color={theme.colors.primary} />
-                                    </TouchableOpacity>
+                                    </TouchableOpacity> */}
                                 </View>
                                 <Card style={{ height: scr_height * 0.2, backgroundColor: theme.colors.background, justifyContent: "center", width: scr_width - 30, marginTop: 20 }}>
 
@@ -262,9 +262,9 @@ const Dashboard = () => {
                             <View style={{ marginHorizontal: 15 }}>
                                 <View style={{ marginTop: 20, flexDirection: "row", justifyContent: "space-between" }}>
                                     <RNText title={"Dashboard"} color={theme.colors.primary} fontSize={18} fontWeight="500" />
-                                    <TouchableOpacity style={{ marginHorizontal: 10 }} onPress={() => navigation.navigate("DocumentScanner")}>
+                                    {/* <TouchableOpacity style={{ marginHorizontal: 10 }} >
                                         <FontAwesome5 name="users" size={23} color={theme.colors.primary} />
-                                    </TouchableOpacity>
+                                    </TouchableOpacity> */}
                                 </View>
 
                                 <Card style={{ height: scr_height * 0.2, backgroundColor: theme.colors.background, justifyContent: "center", width: scr_width - 30, marginTop: 15 }}>
@@ -331,9 +331,9 @@ const Dashboard = () => {
 
                         <View style={{ marginTop: 20, flexDirection: "row", justifyContent: "space-between", marginHorizontal: 18 }}>
                             <RNText title={"Dashboard"} color={theme.colors.primary} fontSize={18} fontWeight="500" />
-                            <TouchableOpacity style={{ marginHorizontal: 10 }} onPress={() => navigation.navigate("DocumentScanner")}>
+                            {/* <TouchableOpacity style={{ marginHorizontal: 10 }} >
                                 <FontAwesome5 name="users" size={23} color={theme.colors.primary} />
-                            </TouchableOpacity>
+                            </TouchableOpacity> */}
                         </View>
 
 

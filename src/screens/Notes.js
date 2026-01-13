@@ -142,7 +142,7 @@ const Notes = () => {
   return (
     <View style={{ flex: 1, backgroundColor: theme.colors.elevation.level0 }}>
       <View style={{ flex: 0.8, flexDirection: "row", alignItems: "center", paddingHorizontal: 20, backgroundColor: "#fbede3", justifyContent: "space-between" }}>
-        <AntDesign name="arrowleft" size={22} color={theme.colors.primary} onPress={() => navigation.goBack()} />
+        <AntDesign name="arrow-left" size={22} color={theme.colors.primary} onPress={() => navigation.goBack()} />
         <RNText title={"Notes"} fontSize={20} color={theme.colors.primary} variant="bodyMedium" fontWeight="500" />
         <Menu
           visible={menuVisible}
@@ -282,7 +282,7 @@ const Notes = () => {
                           <TouchableOpacity onPress={() => selectionNoteList(index)}>
                             {!item.checked ?
                               <Entypo name="circle" size={17} color={theme.colors.primary} /> :
-                              <AntDesign name="checkcircle" size={17} color={theme.colors.primary} />}
+                              <AntDesign name="check-circle" size={17} color={theme.colors.primary} />}
                           </TouchableOpacity>
 
                         </View>}

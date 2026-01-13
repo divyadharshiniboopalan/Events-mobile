@@ -8,7 +8,9 @@ import { TouchableOpacity } from 'react-native';
 import * as Calendar from 'expo-calendar';
 import { DatePickerInput, DatePickerModal, TimePickerModal } from 'react-native-paper-dates';
 import moment from 'moment';
-import { AntDesign, MaterialCommunityIcons, FontAwesome5, Entypo, FontAwesome6, Fontisto } from '@expo/vector-icons';
+import { AntDesign, MaterialCommunityIcons, FontAwesome5, Fontisto } from '@expo/vector-icons';
+import Entypo from '@expo/vector-icons/Entypo';
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import TitleBar from '../components/TitleBar';
 import { useToast } from 'react-native-toast-notifications';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
@@ -152,7 +154,7 @@ const UpdateEvent = (props) => {
 
                 const updateNoteValue = await Calendar.updateEventAsync(value, eventDetails);
                 navigation.goBack()
-                toast.show("Event Update successfully!", { type: 'success' });
+                alert("Event Update successfully!");
 
             }
             catch (error) {
@@ -492,7 +494,7 @@ const UpdateEvent = (props) => {
                                                     locationRef.current?.setAddressText(''), setLocation("")
                                                 }}
                                             >
-                                                {Platform.OS === "android" && <AntDesign name="closecircle" size={scr_height * 0.022} color={theme.colors.outline} />}
+                                                {Platform.OS === "android" && <AntDesign name="close-circle" size={scr_height * 0.022} color={theme.colors.outline} />}
                                             </TouchableOpacity>
                                         )}
                                     />

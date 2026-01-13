@@ -10,7 +10,7 @@ const LottieLoader = ({ height = "65%", width = "65%" }) => {
                 autoPlay
                 ref={animation}
                 style={{ width: width, height: height,justifyContent:"center",alignSelf:"center",alignItems:"center" }}
-                source={require("../assests/calendarloader.json")}
+                source={require("../assets/loader.json")}
                 resizeMode='contain'
             />
         </View>

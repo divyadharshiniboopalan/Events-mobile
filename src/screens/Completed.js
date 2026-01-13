@@ -47,21 +47,21 @@ const Completed = (props) => {
                         style={{ height: "100%" }}
                         keyExtractor={(item, index) => item + index.toString()}
                         ListEmptyComponent={
-                            <View>
-                                <View style={{ alignItems: "center", marginTop: 10 }}>
-                                    <Image source={require("../assests/No-Events.png")} style={{ height: 300, width: 350, resizeMode: "contain" }} />
-                                </View>
-                                <View style={{ alignItems: "center" }}>
-                                    <RNText title={`No Events Available`} fontSize={20} color={theme.colors.onBackground} variant="bodyMedium" fontWeight="500" />
-                                    <View style={{ marginTop: 20 }}>
-                                        <RNText title={"Find and booking concert tickets near"} color={"#9597a4"} fontSize={13} textAlign={"center"} />
-                                        <RNText title={"you! Invite your friends to watch together"} color={"#9597a4"} fontSize={13} padding={4} />
-                                    </View>
-                                </View>
-                                <TouchableOpacity style={{ flexDirection: "row", width: "80%", height: 60, alignSelf: "center", alignItems: "center", backgroundColor: "#2e272a", borderRadius: 15, justifyContent: "center", marginTop: 60 }} onPress={() => navigation.navigate("CreateEvents")}>
-                                    <RNText title={"EXPLORE EVENTS"} color={theme.colors.background} fontSize={15} fontWeight="500" />
-                                </TouchableOpacity>
-                            </View>}
+                        <View style={{marginTop:60, alignItems:"center"}}>
+                                                        <View style={{ alignItems:"center"}}>
+                                                            <Image source={require("../assets/noevent.png")} style={{ height: 300, width: 300, resizeMode: "cover",borderRadius:20 }} />
+                                                        </View>
+                                                        <View style={{ alignItems: "center",marginVertical:30 }}>
+                                                            {/* <RNText title={`No Events Available`} fontSize={20} color={theme.colors.onBackground} variant="bodyMedium" fontWeight="500" /> */}
+                                                            <View style={{}}>
+                                                                <RNText title={"Find and booking concert tickets near"} color={"#9597a4"} fontSize={13} textAlign={"center"} />
+                                                                <RNText title={"you! Invite your friends to watch together"} color={"#9597a4"} fontSize={13} padding={4} />
+                                                            </View>
+                                                        </View>
+                                                        <TouchableOpacity style={{ flexDirection: "row", width: "80%", height: 60, alignSelf: "center", alignItems: "center", backgroundColor: "#2e272a", borderRadius: 15, justifyContent: "center",  }} onPress={() => navigation.navigate("CreateEvents")}>
+                                                            <RNText title={"EXPLORE EVENTS"} color={theme.colors.background} fontSize={15} fontWeight="500" />
+                                                        </TouchableOpacity>
+                                                    </View>}
                         stickySectionHeadersEnabled={false}
                         renderItem={({ item, index }) => (
 
