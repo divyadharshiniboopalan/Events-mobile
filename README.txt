@@ -1,5 +1,5 @@
 project demo video link:
-https://github.com/user-attachments/assets/f316b0ce-f172-487d-ab45-e7bcbaeb6f3b
+https://github.com/user-attachments/assets/692f3c76-82c7-4739-abf1-74c8c5c3768d
 
 
 Roboto Slab Variable Font
