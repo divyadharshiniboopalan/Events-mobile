@@ -1,4 +1,4 @@
-project demo viddeo link:
+project demo video link:
 https://github.com/user-attachments/assets/f316b0ce-f172-487d-ab45-e7bcbaeb6f3b
 
 
